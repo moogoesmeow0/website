@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>moo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="kaomoji-sidebar kaomoji-left">
+            <div class="scroll-text" id="kaomoji-left"></div>
+        </div>
+
+        <main class="content">
+            <header class="header">
+                <h1>Welcome to<br> this webpage</h1>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#more">More</a>
+                </nav>
+            </header>
+
+            <section class="about-section" id="about">
+                <h2>About Me</h2>
+                <p>Hello! I like 'pooters and cats.</p>
+            </section>
+
+            <section class="project-section" id="projects">
+                <div>
+                    <h2>Recent Project</h2>
+                    <p>Look! I made a cute little lizard </p>
+                </div>
+                <img src="images/lizard.jpg" alt="2D computer animated lizard and snake" width=400 height=300>
+            </section>
+
+            <section class="more-section" id="more">
+                <h2>More</h2>
+                <p>If you're here, you know me irl or are just wierd. Either way, go touch some grass.
+                    <br><br>also, this website is open source, so visit the github repo here:
+                </p>
+                <a href="https://github.com/moogoesmeow0/moogoesmeow0.github.io" link </a>
+            </section>
+        </main>
+
+        <div class="kaomoji-sidebar kaomoji-right">
+            <div class="scroll-text" id="kaomoji-right"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fetch kaomoji from the kaomoji.txt file and populate the scroll-text elements
+        fetch('kaomoji.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Could not fetch kaomoji.txt');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('kaomoji-left').textContent = data;
+                document.getElementById('kaomoji-right').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error fetching kaomoji:', error);
+            });
+
+        // Infinite scrolling animation restart
+        const scrollTexts = document.querySelectorAll('.scroll-text');
+        scrollTexts.forEach(text => {
+            text.addEventListener('animationend', () => {
+                text.style.animation = 'none';
+                text.offsetHeight;
+                text.style.animation = 'scroll 20s linear infinite';
+            });
+        });
+    </script>
+</body>
+
+</html>
