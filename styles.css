@@ -54,7 +54,7 @@
 
         @keyframes scroll {
             0% {
-                transform: rotate(90deg) translateX(-100%);
+                transform: rotate(90deg) translateX(-80%);
             }
 
             100% {
