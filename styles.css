@@ -58,7 +58,7 @@ body {
 }
 
 .kaomoji-sidebar .scroll-text {
-    transform: rotate(90deg);
+    transform: rotate(.25turn);
     white-space: nowrap;
     animation: scroll 120s linear infinite;
 }
@@ -71,6 +71,10 @@ body {
 .kaomoji-right {
     right: 0;
     border-left: 1px solid #000;
+}
+
+.kaomoji-right .scroll-text {
+    transform:  rotate(.5turn);
 }
 
 @keyframes scroll {
