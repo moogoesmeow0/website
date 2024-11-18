@@ -7,8 +7,13 @@
 }
 
 @font-face {
-    font-family: 'FunnelDisplay';
+    font-family: 'Funnel';
     src: url('fonts/Funnel_Display/static/FunnelDisplay-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BoldFunnel';
+    src: url(fonts/Funnel_Display/static/FunnelDisplay-Bold.ttf);
 }
 
 @font-face {
@@ -17,7 +22,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Funnel_Display, Arial;
+    font-family: Funnel, Arial;
 }
 p, a {
     font-family: Dosis, Arial;
