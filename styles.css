@@ -105,6 +105,9 @@ body {
     margin-left: 40px;
     background: white;
     margin-bottom: 40px;
+    h1 {
+        font-family: BoldFunnel;
+    }
 }
 
 .header::after {
