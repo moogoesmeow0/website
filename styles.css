@@ -7,8 +7,13 @@
 }
 
 @font-face {
-    font-family: Funnel_Display, Dosis;
-    src: url(fonts/Funnel_Display/static/FunnelDisplay-SemiBold.ttf), url(fonts/Dosis/static/Dosis-Medium.ttf);
+    font-family: 'FunnelDisplay';
+    src: url('fonts/Funnel_Display/static/FunnelDisplay-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('fonts/Dosis/static/Dosis-Medium.ttf') format('truetype');
 }
 
 h1, h2, h3, h4, h5, h6 {
