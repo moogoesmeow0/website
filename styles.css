@@ -225,3 +225,8 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+.decorations .stronk {
+    transform: rotate(6deg);
+    text-align: center;
+}
