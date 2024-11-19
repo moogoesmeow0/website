@@ -1,0 +1,21 @@
+h1 {
+    font-family: Creepster;
+}
+
+p {
+    font-family: Dosis;
+}
+
+@font-face {
+    font-family: Creepster;
+    src: url(fonts/Creepster/Creepster-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('fonts/Dosis/static/Dosis-Medium.ttf') format('truetype');
+}
+
+.container {
+    text-align: center;
+}
