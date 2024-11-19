@@ -21,7 +21,7 @@
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
                     <a href="#more">More</a>
-                    <a href="boo.html" target="_blank">Fun</a>
+                    <a href="boo" target="_blank">Fun</a>
                 </nav>
             </header>
 
@@ -40,7 +40,8 @@
 
             <section class="more-section" id="more">
                 <h2>More</h2>
-                <p>If you're here, you know me irl or are just wierd. Either way, what you lookin at? 🤨
+                <p>If you're here, you know me irl or are just wierd. Either way, what you lookin
+                    at? 🤨
                     <br><br>also, this website is open source, so visit the github repo here:
                 </p>
                 <a href="https://github.com/moogoesmeow0/website" target="_blank"> link </a>
@@ -56,10 +57,15 @@
         // Add smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    // Smooth scroll for internal links
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Do nothing for external links, let the default behavior handle them
             });
         });
 

@@ -8,12 +8,12 @@ p {
 
 @font-face {
     font-family: Creepster;
-    src: url(fonts/Creepster/Creepster-Regular.ttf);
+    src: url(../fonts/Creepster/Creepster-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Dosis';
-    src: url('fonts/Dosis/static/Dosis-Medium.ttf') format('truetype');
+    src: url('../fonts/Dosis/static/Dosis-Medium.ttf') format('truetype');
 }
 
 .container {
