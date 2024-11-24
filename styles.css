@@ -1,9 +1,13 @@
+html {
+  background-color: linen;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border-radius: 5%;
+    background-color: linen;
 }
 
 @font-face {
@@ -31,7 +35,7 @@ p, a {
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: white;
+    background: linen;
     display: flex;
 }
 
@@ -52,14 +56,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: linen;
     overflow: hidden;
     z-index: 100;
 }
 
 .kaomoji-sidebar .scroll-text {
     transform: rotate(.25turn);
-    white-space: nowrap;
+    linen-space: nowrap;
     animation: scroll 120s linear infinite;
 }
 
@@ -137,7 +141,7 @@ body {
 .project-section {
     position: relative;
     padding: 40px;
-    background: white;
+    background: linen;
     margin-bottom: 40px;
     margin-left: 20px;
     display: grid;
@@ -162,7 +166,7 @@ body {
     position: relative;
     padding: 40px;
     margin-left: 20px;
-    background: white;
+    background: linen;
 }
 
 .more-section::before {
@@ -226,7 +230,14 @@ p {
     }
 }
 
-.decorations .stronk {
+.decorations .stronk{
     transform: rotate(6deg);
     text-align: center;
+}
+
+.woah{
+    transform: rotate(-8deg);
+    text-align: middle;
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
 }
