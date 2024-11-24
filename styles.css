@@ -63,7 +63,7 @@ body {
 
 .kaomoji-sidebar .scroll-text {
     transform: rotate(.25turn);
-    linen-space: nowrap;
+    white-space: nowrap;
     animation: scroll 120s linear infinite;
 }
 
