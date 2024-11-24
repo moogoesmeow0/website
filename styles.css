@@ -118,15 +118,20 @@ body {
     }
 }
 
+
 .header::after {
     content: '';
     position: absolute;
     bottom: -20px;
-    left: 0;
-    width: 100%;
+    /* Position it outside the padding */
+    left: -60px;
+    /* Extend past the left padding to reach sidebar */
+    width: calc(100% + 120px);
+    /* Add extra width to reach both sidebars */
     height: 2px;
     background: #000;
     transform: rotate(-3deg);
+    transform-origin: center;
 }
 
 .about-section {
@@ -154,11 +159,12 @@ body {
     content: '';
     position: absolute;
     top: -20px;
-    left: 0;
-    width: 100%;
+    left: -60px;
+    width: calc(100% + 120px);
     height: 2px;
     background: #000;
     transform: rotate(3deg);
+    transform-origin: center;
 }
 
 
@@ -173,11 +179,12 @@ body {
     content: '';
     position: absolute;
     top: -20px;
-    left: 0;
-    width: 100%;
+    left: -60px;
+    width: calc(100% + 120px);
     height: 2px;
     background: #000;
     transform: rotate(-5deg);
+    transform-origin: center;
 }
 
 .image-placeholder {
