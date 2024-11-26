@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Hello Yew</title>
+  <style defer>
+    * {
+      background-color: linen;
+    }
+  </style>
+<link rel="modulepreload" href="/gudpractice-cda74079c624dccb.js" crossorigin=anonymous integrity="sha384-tZTVrI2nCH5exeVWtTlbb+kEZLwJo8Js16Vul6PC8qSTR4uy8gH43oPgq5/CByo+"><link rel="preload" href="/gudpractice-cda74079c624dccb_bg.wasm" crossorigin=anonymous integrity="sha384-9swHdG00WbEE4YQpZ7kAGuBHArxELlcoNgy0C8MgvGDq/YNK9z/593tQ7uUF444x" as="fetch" type="application/wasm"></head>
+
+<body>
+<script type="module" nonce="aCBAQecqfCP0yMz2C6cHBA==">
+import init, * as bindings from '/gudpractice-cda74079c624dccb.js';
+const wasm = await init({ module_or_path: '/gudpractice-cda74079c624dccb_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+
+</html>
