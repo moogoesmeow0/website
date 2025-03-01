@@ -118,6 +118,9 @@ body {
     }
 }
 
+.header .nav .prooject{
+    text-size-adjust: .5;
+}
 
 .header::after {
     content: '';
@@ -248,3 +251,5 @@ p {
     vertical-align: top;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
