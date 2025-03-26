@@ -1,4 +1,4 @@
-### AMOGUS ඞ
+### Greetings! 
 
 I like potatoes and cats
 
