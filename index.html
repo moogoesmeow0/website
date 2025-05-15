@@ -2,112 +2,122 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>moo</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="me" href="https://defcon.social/@moo">
+  <meta charset="UTF-8">
+  <title>moo</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="me" href="https://defcon.social/@moo">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZF41DEH87"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZF41DEH87');
+</script>
+
 <body>
-    <div class="container">
-        <div class="kaomoji-sidebar kaomoji-left">
-            <div class="scroll-text" id="kaomoji-left"></div>
-        </div>
-
-        <main class="content">
-            <header class="header">
-                <h1>Welcome to<br> this webpage...</h1>
-                <nav class="nav">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#more">More</a>
-                    <a href="boo" target="_blank">Fun</a>
-                    <div class="prooject">
-                        <a href="tictactoe" class="prooject-link">Prooject</a>
-                        <p class="works">⬆ Works Now!</p>
-                    </div>
-                </nav>
-             </header>
-
-            <section class="about-section" id="about">
-                <h2>About Me</h2>
-                <p>Hello! I like 'pooters and cats.</p>
-            </section>
-
-            <section class="project-section" id="projects">
-                <div>
-                    <h2>Recent Project</h2>
-                    <p>Look! I made a cute little lizard </p>
-                </div>
-                <img src="images/lizard.jpg" alt="2D computer animated lizard and snake" width=400 height=300>
-                <div class="decorations">
-                    <div class="stronk">
-                        <p>ᕙ( •̀ ᗜ •́ )ᕗ</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="more-section" id="more">
-                <h2>More</h2>
-                <p>If you're here, you know me irl or are just wierd. Either way, what you lookin
-                    at? 🤨
-                    <br><br>also, this website is open source, so visit the github repo here:
-                </p>
-                <a href="https://github.com/moogoesmeow0/website" target="_blank"> link </a>
-            </section>
-
-        </main>
-
-        <div class="kaomoji-sidebar kaomoji-right">
-            <div class="scroll-text" id="kaomoji-right"></div>
-        </div>
-
-
+  <div class="container">
+    <div class="kaomoji-sidebar kaomoji-left">
+      <div class="scroll-text" id="kaomoji-left"></div>
     </div>
 
-    <script>
-        // Add smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#')) {
-                    // Smooth scroll for internal links
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-                // Do nothing for external links, let the default behavior handle them
-            });
-        });
+    <main class="content">
+      <header class="header">
+        <h1>Welcome to<br> this webpage...</h1>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#more">More</a>
+          <a href="boo" target="_blank">Fun</a>
+          <div class="prooject">
+            <a href="tictactoe" class="prooject-link">Prooject</a>
+            <p class="works">⬆ Kinda Works Now!</p>
+          </div>
+        </nav>
+      </header>
 
-        // Fetch kaomoji from the kaomoji.txt file and populate the scroll-text elements
-        fetch('kaomoji.txt')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Could not fetch kaomoji.txt');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('kaomoji-left').textContent = data;
-                document.getElementById('kaomoji-right').textContent = data;
-            })
-            .catch(error => {
-                console.error('Error fetching kaomoji:', error);
-            });
+      <section class="about-section" id="about">
+        <h2>About Me</h2>
+        <p>Hello! I like 'pooters and cats.</p>
+      </section>
 
-        // Infinite scrolling animation restart
-        const scrollTexts = document.querySelectorAll('.scroll-text');
-        scrollTexts.forEach(text => {
-            text.addEventListener('animationend', () => {
-                text.style.animation = 'none';
-                text.offsetHeight;
-                text.style.animation = 'scroll 90s linear infinite';
-            });
-        });
-    </script>
+      <section class="project-section" id="projects">
+        <div>
+          <h2>Recent Project</h2>
+          <p>Look! I made a cute little lizard </p>
+        </div>
+        <img src="images/lizard.jpg" alt="2D computer animated lizard and snake" width=400 height=300>
+        <div class="decorations">
+          <div class="stronk">
+            <p>ᕙ( •̀ ᗜ •́ )ᕗ</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="more-section" id="more">
+        <h2>More</h2>
+        <p>If you're here, you know me irl or are just wierd. Either way, what you lookin
+          at? 🤨
+          <br><br>also, this website is open source, so visit the github repo here:
+        </p>
+        <a href="https://github.com/moogoesmeow0/website" target="_blank"> link </a>
+      </section>
+
+    </main>
+
+    <div class="kaomoji-sidebar kaomoji-right">
+      <div class="scroll-text" id="kaomoji-right"></div>
+    </div>
+
+
+  </div>
+
+  <script>
+    // Add smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          // Smooth scroll for internal links
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+        // Do nothing for external links, let the default behavior handle them
+      });
+    });
+
+    // Fetch kaomoji from the kaomoji.txt file and populate the scroll-text elements
+    fetch('kaomoji.txt')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Could not fetch kaomoji.txt');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('kaomoji-left').textContent = data;
+        document.getElementById('kaomoji-right').textContent = data;
+      })
+      .catch(error => {
+        console.error('Error fetching kaomoji:', error);
+      });
+
+    // Infinite scrolling animation restart
+    const scrollTexts = document.querySelectorAll('.scroll-text');
+    scrollTexts.forEach(text => {
+      text.addEventListener('animationend', () => {
+        text.style.animation = 'none';
+        text.offsetHeight;
+        text.style.animation = 'scroll 90s linear infinite';
+      });
+    });
+  </script>
 </body>
 
 </html>
